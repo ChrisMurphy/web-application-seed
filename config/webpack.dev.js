@@ -45,7 +45,7 @@ module.exports = webpackMerge(commonConfig, {
 		// Set the environment to development
 		new webpack.DefinePlugin({
 			"process.env": {
-				NODE_ENV: JSON.stringify(METADATA.ENV),
+				NODE_ENV: JSON.stringify(METADATA.ENV)
 			}
 		}),
 	],

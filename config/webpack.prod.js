@@ -10,8 +10,9 @@ var helpers = require('./helpers');  //  Include any shared helper functions
 const ENV = 'production';
 const METADATA = webpackMerge(commonConfig.metadata, {
 	host: 'localhost',
-  	port: 8080,
+	port: 8080,
 	ENV: ENV,
+	SENTRY_KEY: 'https://c4b3e1ebfabc4400af54f1699654dc5c@app.getsentry.com/85528'
 });
 
 module.exports = webpackMerge(commonConfig, {
@@ -49,6 +50,7 @@ module.exports = webpackMerge(commonConfig, {
 		new webpack.DefinePlugin({
 			"process.env": {
 				NODE_ENV: JSON.stringify(METADATA.ENV),
+				SENTRY_KEY: JSON.stringify(METADATA.SENTRY_KEY)
 			}
 		})
 	],
