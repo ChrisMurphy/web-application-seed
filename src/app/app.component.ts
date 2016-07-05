@@ -14,8 +14,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	public name: string = 'My First Angular 2 App';
-
-	constructor(boom: any){
-		this.boom.explode();
-	}
 }
